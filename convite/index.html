@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IntegriCar - Convite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (id) {
+      window.location.href = 'integricar://convite?id=' + id;
+      setTimeout(() => {
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.integricar.app';
+      }, 2000);
+    } else {
+      window.location.href = 'https://play.google.com/store/apps/details?id=com.integricar.app';
+    }
+  </script>
+  <p style="font-family:sans-serif;text-align:center;margin-top:40px;">
+    Abrindo o IntegriCar...<br><br>
+    <a href="https://play.google.com/store/apps/details?id=com.integricar.app">
+      Clique aqui se não abrir automaticamente
+    </a>
+  </p>
+</body>
+</html>
